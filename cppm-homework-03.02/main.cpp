@@ -33,12 +33,12 @@ public:
         num = 1;
     }
     
-    void counter_plus (int num)
+    void counter_plus ()
     {
        this->num++;
     }
     
-    void counter_minus (int num)
+    void counter_minus ()
     {
         this->num--;
     }
@@ -55,7 +55,6 @@ int main(int argc, const char * argv[]) {
     std::string answer;
     std::string no;
     char a;
-    Counter counter;
     int i;
     
     std::cout << "Do  you want to enter a number for the counter? Enter yes or no: ";
@@ -73,11 +72,11 @@ if (answer == "yes")
             std::cin >> a;
             if (a == '+')
             {
-                counter.counter_plus(i);
+                counter.counter_plus();
             }
             else if (a == '-')
             {
-                counter.counter_minus(i);
+                counter.counter_minus();
             }
             else if (a == '=')
             {
@@ -92,17 +91,18 @@ if (answer == "yes")
         
     } else
     {
+        Counter counter;
         for ( ; ; )
         {
             std::cout << '\n' << "Enter ('+', '-', '=' or 'x'): ";
             std::cin >> a;
             if (a == '+')
             {
-                counter.counter_plus(0);
+                counter.counter_plus();
             }
             else if (a == '-')
             {
-                counter.counter_minus(0);
+                counter.counter_minus();
             }
             else if (a == '=')
             {
